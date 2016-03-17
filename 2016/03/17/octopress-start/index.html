@@ -4,18 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>My New Post | Zeil的博客</title>
+  <title>在github上配置octopress博客 | Zeil的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
+  <meta name="description" content="配置git通过SSH连接到github
+使用的是windows平台
+
+
+git配置用户信息
+git config –global user.name “Zeillion” 
+git config –global user.email “zeillion@163.com”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://yoursite.com/2016/03/17/My-New-Post/index.html">
+<meta property="og:title" content="在github上配置octopress博客">
+<meta property="og:url" content="http://yoursite.com/2016/03/17/octopress-start/index.html">
 <meta property="og:site_name" content="Zeil的博客">
-<meta property="og:description" content="Walk steps step by step">
-<meta property="og:updated_time" content="2016-03-17T03:22:06.651Z">
+<meta property="og:description" content="配置git通过SSH连接到github
+使用的是windows平台
+
+
+git配置用户信息
+git config –global user.name “Zeillion” 
+git config –global user.email “zeillion@163.com”">
+<meta property="og:updated_time" content="2016-03-17T07:13:18.613Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Post">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="在github上配置octopress博客">
+<meta name="twitter:description" content="配置git通过SSH连接到github
+使用的是windows平台
+
+
+git配置用户信息
+git config –global user.name “Zeillion” 
+git config –global user.email “zeillion@163.com”">
   
     <link rel="alternative" href="/atom.xml" title="Zeil的博客" type="application/atom+xml">
   
@@ -205,11 +223,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-octopress-start" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/17/My-New-Post/" class="article-date">
-  	<time datetime="2016-03-17T03:22:06.000Z" itemprop="datePublished">2016-03-17</time>
+      <a href="/2016/03/17/octopress-start/" class="article-date">
+  	<time datetime="2016-03-17T09:02:09.000Z" itemprop="datePublished">2016-03-17</time>
 </a>
     </div>
   
@@ -222,7 +240,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      My New Post
+      在github上配置octopress博客
     </h1>
   
 
@@ -231,6 +249,10 @@
       <div class="article-info article-info-post">
         
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/git/">git</a><a class="article-category-link" href="/categories/git/github/">github</a><a class="article-category-link" href="/categories/git/github/octopress/">octopress</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -238,7 +260,108 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="配置git通过SSH连接到github"><a href="#配置git通过SSH连接到github" class="headerlink" title="配置git通过SSH连接到github"></a>配置git通过SSH连接到github</h1><blockquote>
+<p>使用的是windows平台</p>
+</blockquote>
+<ol>
+<li>git配置用户信息<blockquote>
+<p>git config –global user.name “Zeillion” </p>
+<p>git config –global user.email “zeillion@163.com”</p>
+<a id="more"></a></blockquote>
+</li>
+<li><p>生成SSHkey信息</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “zeillion@163.com”</p>
+<p>把生成的公钥添加到github站上的sshkeys里面。</p>
+</blockquote>
+</li>
+<li><p>测试github上的sshkeys是否配置成功</p>
+<blockquote>
+<p>git -T git@github.com</p>
+<p>查看到欢迎就表示成功。</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="Ruby环境配置"><a href="#Ruby环境配置" class="headerlink" title="Ruby环境配置"></a>Ruby环境配置</h1><ol>
+<li>安装ruby和devkit</li>
+<li>进入devkit目录后加开git bash</li>
+<li>ruby dk.rb init   运行后会生成一个config.yml，在里面添加到ruby的安装目录 - D:/Ruby21-x64</li>
+<li>ruby dk.rb install 提示安装成功会出现两条信息。</li>
+</ol>
+<h1 id="安装Octopress并设置默认主题"><a href="#安装Octopress并设置默认主题" class="headerlink" title="安装Octopress并设置默认主题"></a>安装Octopress并设置默认主题</h1><ol>
+<li>克隆Octopress至本地 <blockquote>
+<p>git clone <a href="https://github.com/imathis/octopress.git" target="_blank" rel="external">https://github.com/imathis/octopress.git</a> octopress</p>
+</blockquote>
+</li>
+<li>安装依赖项 <blockquote>
+<p>首先更改安装的软件源 gem sources -a <a href="https://ruby.taobao.org" target="_blank" rel="external">https://ruby.taobao.org</a>  </p>
+<p>gem sources -r <a href="https://rubygems.org" target="_blank" rel="external">https://rubygems.org</a>  </p>
+<p>还需要把Gemfile里面的sourcess也改为<a href="https://taobao.org" target="_blank" rel="external">https://taobao.org</a></p>
+<p>gem install bundler </p>
+<p>bundle install</p>
+</blockquote>
+</li>
+<li>安装并使用默认主题   <blockquote>
+<p>rake install</p>
+</blockquote>
+</li>
+</ol>
+<pre><code>&gt; rake generate  
+&gt; 
+&gt; rake preview
+</code></pre><h1 id="提高博客访问速度"><a href="#提高博客访问速度" class="headerlink" title="提高博客访问速度"></a>提高博客访问速度</h1><ol>
+<li><p>Octopress默认使用的是Google的JS公共库地址，加载的过程无比的缓慢。因此我们要把它改为百度的JS公共库，需要把/source/_includes/head.html文件中的Google公共库地址改为：</p>
+<blockquote>
+<figure class="highlight plain"><figcaption><span>src="//libs.baidu.com/jquery/1.9.1/jquery.min.js">```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2. 从上图可以看出加载失败的还有twitter，这个也得给去掉。把在根目录下的_config.yml文件中Twitter内容给注释掉。</span><br><span class="line">	&gt; ```# Twitter#twitter_user:#twitter_tweet_button: true</span><br></pre></td></tr></table></figure>
+<p>把\source_includes\after_footer.html文件中的twitter内容给注释掉：</p>
+<figure class="highlight plain"><figcaption><span>include twitter_sharing.html %&#125;-->```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 删除Google font</span><br><span class="line">	&gt; 把在\source\_includes\custom\head.html中的Google font样式给删除：</span><br><span class="line">	&gt;</span><br><span class="line">	&gt;```&lt;link href=&quot;//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p> &gt;</p>
+<blockquote>
+<p><code>&lt;link href=&quot;//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&quot; rel=&quot;stylesheet</code></p>
+</blockquote>
+</li>
+</ol>
+<h1 id="生成博客与单面页"><a href="#生成博客与单面页" class="headerlink" title="生成博客与单面页"></a>生成博客与单面页</h1><ol>
+<li>新建博客<blockquote>
+<p>rake new_post[“title”]</p>
+</blockquote>
+</li>
+<li>新建单页面<blockquote>
+<p>rake new_page[title]</p>
+<blockquote>
+<p>creates/source/title/index.markdown</p>
+</blockquote>
+<p>rake new_page[title/page.html]</p>
+<blockquote>
+<p>creates/source/title/page.html</p>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<h1 id="部署blog到github"><a href="#部署blog到github" class="headerlink" title="部署blog到github"></a>部署blog到github</h1><ol>
+<li>在github上创建仓库username.github.io</li>
+<li>git bash里面输入rake setup_github_pages<blockquote>
+<p>输入url@git@github.com:zeillion/zeillion.github.io.git</p>
+</blockquote>
+</li>
+<li>rake generate 让_deploy里面内容最新</li>
+<li>rake deploy部署到github上</li>
+</ol>
+<h1 id="把octopress源代码托管到github"><a href="#把octopress源代码托管到github" class="headerlink" title="把octopress源代码托管到github"></a>把octopress源代码托管到github</h1><ul>
+<li>git add .</li>
+<li>git commit -m “xxxx”</li>
+<li>git push origin source</li>
+</ul>
+<h1 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h1><blockquote>
+<p>安装主题需要先在github上clone主题到octopress目录下面的.theme目录下</p>
+<p>然后执行rake install[‘themenaem’]</p>
+<p>Tip: 安装主题的时候会覆盖一些配置文件</p>
+</blockquote>
+<h1 id="自定义域名指向github"><a href="#自定义域名指向github" class="headerlink" title="自定义域名指向github"></a>自定义域名指向github</h1><blockquote>
+<p>echo  “iamzhongyi.com” &gt; srouce/CNAME<br>在阿里云解析到192.30.252.153(154)</p>
+</blockquote>
+
       
     </div>
     
@@ -247,18 +370,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/17/test2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/03/17/csharp-request-url/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          test2
+          .net使用Request取得当前页面路径
         
       </div>
     </a>
   
   
-    <a href="/2016/03/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2016/03/17/test2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">test2</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -296,7 +419,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="My-New-Post" data-title="My New Post" data-url="http://yoursite.com/2016/03/17/My-New-Post/"></div>>
+	<div class="ds-thread" data-thread-key="octopress-start" data-title="在github上配置octopress博客" data-url="http://yoursite.com/2016/03/17/octopress-start/"></div>>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
