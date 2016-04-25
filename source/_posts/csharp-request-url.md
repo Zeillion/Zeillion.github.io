@@ -6,7 +6,7 @@ comments: true
 categories: [C#,net] 
 ---
 
-# .Net中使用Request对象取得路径的各方法
+# .Net中使用Request对象取得路径的各方法!
 	Request.Url.AbsoluteUri： http://4rkwt72tgs.proxy.qqbrowser.cc/WeChatSGYH/order_confirm.aspx?xcname=123&unid=30&xcid=3&xclength=9
 	Request.Url.AbsolutePath: /WeChatSGYH/order_confirm.aspx
     Request.Url.Authority: 4rkwt72tgs.proxy.qqbrowser.cc
