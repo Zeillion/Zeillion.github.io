@@ -8,35 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="测试环境：CentOS 5.5
 ##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- #adduser tommy
+ -#adduser tommy
 //添加一个名为tommy的用户
  #passwd tommy   //修改密码
 Changing password for user tommy.
 New UNIX password:     //在这里输入新密码
-Retype new UNIX passwor">
+Retype new UNIX passwo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos7 add user and add root promise">
 <meta property="og:url" content="http://yoursite.com/2016/05/18/centos7-add-user-and-add-root-promise/index.html">
 <meta property="og:site_name" content="Zeil的博客">
 <meta property="og:description" content="测试环境：CentOS 5.5
 ##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- #adduser tommy
+ -#adduser tommy
 //添加一个名为tommy的用户
  #passwd tommy   //修改密码
 Changing password for user tommy.
 New UNIX password:     //在这里输入新密码
-Retype new UNIX passwor">
-<meta property="og:updated_time" content="2016-05-18T12:49:11.376Z">
+Retype new UNIX passwo">
+<meta property="og:updated_time" content="2016-05-18T12:51:19.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7 add user and add root promise">
 <meta name="twitter:description" content="测试环境：CentOS 5.5
 ##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- #adduser tommy
+ -#adduser tommy
 //添加一个名为tommy的用户
  #passwd tommy   //修改密码
 Changing password for user tommy.
 New UNIX password:     //在这里输入新密码
-Retype new UNIX passwor">
+Retype new UNIX passwo">
   
     <link rel="alternative" href="/atom.xml" title="Zeil的博客" type="application/atom+xml">
   
@@ -265,21 +265,24 @@ Retype new UNIX passwor">
       
         <p>测试环境：CentOS 5.5</p>
 <p>##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：</p>
-<p> #adduser tommy</p>
+<p> -#adduser tommy</p>
 <p>//添加一个名为tommy的用户</p>
 <p> #passwd tommy   //修改密码</p>
 <p>Changing password for user tommy.</p>
 <p>New UNIX password:     //在这里输入新密码</p>
 <p>Retype new UNIX password:  //再次输入新密码</p>
 <p>passwd: all authentication tokens updated successfully.</p>
+<a id="more"></a>
 <p>##2、赋予root权限</p>
 <p>###方法一： 修改/etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉</p>
-<h2 id="Allows-people-in-group-wheel-to-run-all-commands"><a href="#Allows-people-in-group-wheel-to-run-all-commands" class="headerlink" title="Allows people in group wheel to run all commands"></a>Allows people in group wheel to run all commands</h2><p>%wheel    ALL=(ALL)    ALL</p>
+<p>  -## Allows people in group wheel to run all commands</p>
+<p>%wheel    ALL=(ALL)    ALL</p>
 <p>然后修改用户，使其属于root组（wheel），命令如下：</p>
-<p> #usermod -g root tommy</p>
+<p> -#usermod -g root tommy</p>
 <p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
 <p>###方法二： 修改/etc/sudoers 文件，找到下面一行，在root下面添加一行，如下所示：</p>
-<h2 id="Allow-root-to-run-any-commands-anywhere"><a href="#Allow-root-to-run-any-commands-anywhere" class="headerlink" title="Allow root to run any commands anywhere"></a>Allow root to run any commands anywhere</h2><p>root    ALL=(ALL)     ALL</p>
+<p> -## Allow root to run any commands anywhere</p>
+<p>root    ALL=(ALL)     ALL</p>
 <p>tommy   ALL=(ALL)     ALL</p>
 <p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
 <p>###方法三： 修改/etc/passwd 文件，找到如下行，把用户ID修改为0 ，如下所示：</p>
