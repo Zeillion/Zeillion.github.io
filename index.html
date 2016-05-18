@@ -79,7 +79,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -206,6 +206,58 @@
 
       <div class="body-wrap">
   
+    <article id="post-阿里云Centos7中的python版本从2-6换到2-7-11" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/18/阿里云Centos7中的python版本从2-6换到2-7-11/" class="article-date">
+  	<time datetime="2016-05-18T11:59:47.000Z" itemprop="datePublished">2016-05-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/18/阿里云Centos7中的python版本从2-6换到2-7-11/">阿里云Centos7中的python版本从2.6换到2.7.11</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-html-whitespace" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -315,6 +367,87 @@ Request.Url.PathAndQuery: /WeChatSGYH/order_confirm.aspx?xcname=123&amp;unid=30&
       
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/C/">C#</a><a class="article-category-link" href="/categories/C/net/">net</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-centos7-add-user-and-add-root-promise" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/17/centos7-add-user-and-add-root-promise/" class="article-date">
+  	<time datetime="2016-03-17T09:02:09.000Z" itemprop="datePublished">2016-03-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/17/centos7-add-user-and-add-root-promise/">centos7 add user and add root promise</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>测试环境：CentOS 5.5</p>
+<p>##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：</p>
+<p> #adduser tommy</p>
+<p>//添加一个名为tommy的用户</p>
+<p> #passwd tommy   //修改密码</p>
+<p>Changing password for user tommy.</p>
+<p>New UNIX password:     //在这里输入新密码</p>
+<p>Retype new UNIX password:  //再次输入新密码</p>
+<p>passwd: all authentication tokens updated successfully.</p>
+<p>##2、赋予root权限</p>
+<p>###方法一： 修改/etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉</p>
+<h2 id="Allows-people-in-group-wheel-to-run-all-commands"><a href="#Allows-people-in-group-wheel-to-run-all-commands" class="headerlink" title="Allows people in group wheel to run all commands"></a>Allows people in group wheel to run all commands</h2><p>%wheel    ALL=(ALL)    ALL</p>
+<p>然后修改用户，使其属于root组（wheel），命令如下：</p>
+<p> #usermod -g root tommy</p>
+<p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
+<p>###方法二： 修改/etc/sudoers 文件，找到下面一行，在root下面添加一行，如下所示：</p>
+<h2 id="Allow-root-to-run-any-commands-anywhere"><a href="#Allow-root-to-run-any-commands-anywhere" class="headerlink" title="Allow root to run any commands anywhere"></a>Allow root to run any commands anywhere</h2><p>root    ALL=(ALL)     ALL</p>
+<p>tommy   ALL=(ALL)     ALL</p>
+<p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
+<p>###方法三： 修改/etc/passwd 文件，找到如下行，把用户ID修改为0 ，如下所示：</p>
+<p>tommy:x:500:500:tommy:/home/tommy:/bin/bash</p>
+<p>修改后如下</p>
+<p>tommy:x:0:500:tommy:/home/tommy:/bin/bash</p>
+<p>保存，用tommy账户登录后，直接获取的就是root帐号的权限。</p>
+<p>##友情提醒：虽然方法三看上去简单方便，但一般不推荐使用，推荐使用方法二。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/linux/">linux</a><a class="article-category-link" href="/categories/linux/centos7/">centos7</a>
 	</div>
 
 
