@@ -4,17 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Category: centos | Zeil的博客</title>
+  <title>nginx常用命令 | Zeil的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zeil的博客">
-<meta property="og:url" content="http://yoursite.com/categories/centos/index.html">
+  <meta name="description" content="###nginx常用命令
+
+1、查看nginx进程1ps -ef|grep nginx说明：nginx的进程由主进程和工作进程组成。   
+2、启动nginx1nginx启动结果显示nginx的主线程和工作线程，工作线程的数量跟nginx.conf中的配置参数worker_processes有关。 
+3、平滑启动nginx1kill -HUP cat /var/run/nginx.pid2或者3n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx常用命令">
+<meta property="og:url" content="http://yoursite.com/2016/05/19/nginx常用命令/index.html">
 <meta property="og:site_name" content="Zeil的博客">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="###nginx常用命令
+
+1、查看nginx进程1ps -ef|grep nginx说明：nginx的进程由主进程和工作进程组成。   
+2、启动nginx1nginx启动结果显示nginx的主线程和工作线程，工作线程的数量跟nginx.conf中的配置参数worker_processes有关。 
+3、平滑启动nginx1kill -HUP cat /var/run/nginx.pid2或者3n">
+<meta property="og:updated_time" content="2016-05-19T12:59:31.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zeil的博客">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="nginx常用命令">
+<meta name="twitter:description" content="###nginx常用命令
+
+1、查看nginx进程1ps -ef|grep nginx说明：nginx的进程由主进程和工作进程组成。   
+2、启动nginx1nginx启动结果显示nginx的主线程和工作线程，工作线程的数量跟nginx.conf中的配置参数worker_processes有关。 
+3、平滑启动nginx1kill -HUP cat /var/run/nginx.pid2或者3n">
   
     <link rel="alternative" href="/atom.xml" title="Zeil的博客" type="application/atom+xml">
   
@@ -204,53 +217,131 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-nginx常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/19/centos-add-system-path/" class="archive-article-date">
-  	<time datetime="2016-05-19T08:09:10.000Z" itemprop="datePublished">5月 19</time>
+    <div class="article-meta">
+      <a href="/2016/05/19/nginx常用命令/" class="article-date">
+  	<time datetime="2016-05-19T12:49:25.000Z" itemprop="datePublished">2016-05-19</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/19/centos-add-system-path/">centos add system path</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      nginx常用命令
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+	</div>
+
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/centos/">centos</a>
+	<a class="article-category-link" href="/categories/nginx/">nginx</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###nginx常用命令</p>
+<blockquote>
+<p>1、查看nginx进程<br>1<br>ps -ef|grep nginx<br>说明：nginx的进程由主进程和工作进程组成。   </p>
+<p>2、启动nginx<br>1<br>nginx<br>启动结果显示nginx的主线程和工作线程，工作线程的数量跟nginx.conf中的配置参数worker_processes有关。 </p>
+<p>3、平滑启动nginx<br>1<br>kill -HUP <code>cat /var/run/nginx.pid</code><br>2<br>或者<br>3<br>nginx -s reload<br>其中进程文件路径在配置文件nginx.conf中可以找到。<br>平滑启动的意思是在不停止nginx的情况下，重启nginx，重新加载配置文件，启动新的工作线程，完美停止旧的工作线程。</p>
+<p>4、完美停止nginx<br>1<br>kill -QUIT <code>cat /var/run/nginx.pid</code>    </p>
+<p>5、快速停止nginx<br>1<br>kill -TERM <code>cat /var/run/nginx.pid</code><br>2<br>或者<br>3<br>kill -INT <code>cat /var/run/nginx.pid</code>    </p>
+<p>6、完美停止工作进程（主要用于平滑升级）<br>1<br>kill -WINCH <code>cat /var/run/nginx.pid</code>     </p>
+<p>7、强制停止nginx<br>1<br>pkill -9 nginx    </p>
+<p>8、检查对nginx.conf文件的修改是否正确<br>1<br>nginx -t -c /etc/nginx/nginx.conf 或者 nginx -t    </p>
+<p>9、停止nginx的命令<br>1<br>nginx -s stop    </p>
+<p>10、查看nginx的版本信息<br>1<br>nginx -v    </p>
+<p>11、查看完整的nginx的配置信息<br>1<br>nginx -V   </p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/19/centos-add-system-path/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centos add system path</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<div class="share_jia">
+		<!-- JiaThis Button BEGIN -->
+		<div class="jiathis_style">
+			<span class="jiathis_txt">分享到：</span>
+			<a class="jiathis_button_weixin"></a>
+			<a class="jiathis_button_cqq"></a>
+			<a class="jiathis_button_tsina"></a>
+			<a class="jiathis_button_ydnote"></a>
+			<a class="jiathis_button_douban"></a>
+			<a href="http://www.jiathis.com/share?uid=2089294" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+			<a class="jiathis_counter_style"></a>
+		</div>
+		<script type="text/javascript">
+		var jiathis_config = {data_track_clickback:'true'};
+		</script>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2089294" charset="utf-8"></script>
+		<!-- JiaThis Button END -->
+	</div>
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="nginx常用命令" data-title="nginx常用命令" data-url="http://yoursite.com/2016/05/19/nginx常用命令/"></div>>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zeillion"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -276,10 +367,10 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false
 	}
 </script>

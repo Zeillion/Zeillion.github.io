@@ -73,13 +73,13 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
+						<li>菜单</li>
 						<li>Tags</li>
 						
-						<li>Links</li>
+						<li>友情链接</li>
 						
 						
-						<li>Über</li>
+						<li>A propos</li>
 						
 					</ul>
 				</div>
@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/全角空格/" style="font-size: 10px;">全角空格</a>
+						<a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/全角空格/" style="font-size: 10px;">全角空格</a>
 					</div>
 				</section>
 				
@@ -205,6 +205,80 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-nginx常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/19/nginx常用命令/" class="article-date">
+  	<time datetime="2016-05-19T12:49:25.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/19/nginx常用命令/">nginx常用命令</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###nginx常用命令</p>
+<blockquote>
+<p>1、查看nginx进程<br>1<br>ps -ef|grep nginx<br>说明：nginx的进程由主进程和工作进程组成。   </p>
+<p>2、启动nginx<br>1<br>nginx<br>启动结果显示nginx的主线程和工作线程，工作线程的数量跟nginx.conf中的配置参数worker_processes有关。 </p>
+<p>3、平滑启动nginx<br>1<br>kill -HUP <code>cat /var/run/nginx.pid</code><br>2<br>或者<br>3<br>nginx -s reload<br>其中进程文件路径在配置文件nginx.conf中可以找到。<br>平滑启动的意思是在不停止nginx的情况下，重启nginx，重新加载配置文件，启动新的工作线程，完美停止旧的工作线程。</p>
+<p>4、完美停止nginx<br>1<br>kill -QUIT <code>cat /var/run/nginx.pid</code>    </p>
+<p>5、快速停止nginx<br>1<br>kill -TERM <code>cat /var/run/nginx.pid</code><br>2<br>或者<br>3<br>kill -INT <code>cat /var/run/nginx.pid</code>    </p>
+<p>6、完美停止工作进程（主要用于平滑升级）<br>1<br>kill -WINCH <code>cat /var/run/nginx.pid</code>     </p>
+<p>7、强制停止nginx<br>1<br>pkill -9 nginx    </p>
+<p>8、检查对nginx.conf文件的修改是否正确<br>1<br>nginx -t -c /etc/nginx/nginx.conf 或者 nginx -t    </p>
+<p>9、停止nginx的命令<br>1<br>nginx -s stop    </p>
+<p>10、查看nginx的版本信息<br>1<br>nginx -v    </p>
+<p>11、查看完整的nginx的配置信息<br>1<br>nginx -V   </p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/nginx/">nginx</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-centos-add-system-path" class="article article-type-post" itemscope itemprop="blogPost">
   
