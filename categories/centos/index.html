@@ -4,39 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>centos7 add user and add root promise | Zeil的博客</title>
+  <title>Category: centos | Zeil的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试环境：CentOS 5.5
-##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- -#adduser tommy
-//添加一个名为tommy的用户
- #passwd tommy   //修改密码
-Changing password for user tommy.
-New UNIX password:     //在这里输入新密码
-Retype new UNIX passwo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="centos7 add user and add root promise">
-<meta property="og:url" content="http://yoursite.com/2016/05/18/centos7-add-user-and-add-root-promise/index.html">
+  <meta name="description" content="Walk steps step by step">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zeil的博客">
+<meta property="og:url" content="http://yoursite.com/categories/centos/index.html">
 <meta property="og:site_name" content="Zeil的博客">
-<meta property="og:description" content="测试环境：CentOS 5.5
-##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- -#adduser tommy
-//添加一个名为tommy的用户
- #passwd tommy   //修改密码
-Changing password for user tommy.
-New UNIX password:     //在这里输入新密码
-Retype new UNIX passwo">
-<meta property="og:updated_time" content="2016-05-18T12:52:46.280Z">
+<meta property="og:description" content="Walk steps step by step">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos7 add user and add root promise">
-<meta name="twitter:description" content="测试环境：CentOS 5.5
-##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- -#adduser tommy
-//添加一个名为tommy的用户
- #passwd tommy   //修改密码
-Changing password for user tommy.
-New UNIX password:     //在这里输入新密码
-Retype new UNIX passwo">
+<meta name="twitter:title" content="Zeil的博客">
+<meta name="twitter:description" content="Walk steps step by step">
   
     <link rel="alternative" href="/atom.xml" title="Zeil的博客" type="application/atom+xml">
   
@@ -226,150 +204,53 @@ Retype new UNIX passwo">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-centos7-add-user-and-add-root-promise" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2016/05/18/centos7-add-user-and-add-root-promise/" class="article-date">
-  	<time datetime="2016-05-18T12:02:09.000Z" itemprop="datePublished">2016-05-18</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/05/19/centos-add-system-path/" class="archive-article-date">
+  	<time datetime="2016-05-19T08:09:10.000Z" itemprop="datePublished">5月 19</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      centos7 add user and add root promise
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/05/19/centos-add-system-path/">centos add system path</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-        
+        <div class="article-info info-on-right">
+          
+          
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/linux/">linux</a><a class="article-category-link" href="/categories/linux/centos7/">centos7</a>
+	<a class="article-category-link" href="/categories/centos/">centos</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>测试环境：CentOS 5.5</p>
-<p>##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：</p>
-<p> -#adduser tommy</p>
-<p>//添加一个名为tommy的用户</p>
-<p> #passwd tommy   //修改密码</p>
-<p>Changing password for user tommy.</p>
-<p>New UNIX password:     //在这里输入新密码</p>
-<p>Retype new UNIX password:  //再次输入新密码</p>
-<p>passwd: all authentication tokens updated successfully.</p>
-<a id="more"></a>
-<p>##2、赋予root权限</p>
-<p>###方法一： 修改/etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉</p>
-<p>  -## Allows people in group wheel to run all commands</p>
-<p>%wheel    ALL=(ALL)    ALL</p>
-<p>然后修改用户，使其属于root组（wheel），命令如下：</p>
-<p> -#usermod -g root tommy</p>
-<p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
-<p>###方法二： 修改/etc/sudoers 文件，找到下面一行，在root下面添加一行，如下所示：</p>
-<p> -## Allow root to run any commands anywhere</p>
-<p>root    ALL=(ALL)     ALL</p>
-<p>tommy   ALL=(ALL)     ALL</p>
-<p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
-<p>###方法三： 修改/etc/passwd 文件，找到如下行，把用户ID修改为0 ，如下所示：</p>
-<p>tommy:x:500:500:tommy:/home/tommy:/bin/bash</p>
-<p>修改后如下</p>
-<p>tommy:x:0:500:tommy:/home/tommy:/bin/bash</p>
-<p>保存，用tommy账户登录后，直接获取的就是root帐号的权限。</p>
-<p>##友情提醒：虽然方法三看上去简单方便，但一般不推荐使用，推荐使用方法二。</p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/05/19/centos-add-system-path/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          centos add system path
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/05/18/阿里云Centos7中的python版本从2-6换到2-7-11/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">阿里云Centos7中的python从2.6换成2.7.11</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<div class="share">
-	<div class="share_jia">
-		<!-- JiaThis Button BEGIN -->
-		<div class="jiathis_style">
-			<span class="jiathis_txt">分享到：</span>
-			<a class="jiathis_button_weixin"></a>
-			<a class="jiathis_button_cqq"></a>
-			<a class="jiathis_button_tsina"></a>
-			<a class="jiathis_button_ydnote"></a>
-			<a class="jiathis_button_douban"></a>
-			<a href="http://www.jiathis.com/share?uid=2089294" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-			<a class="jiathis_counter_style"></a>
-		</div>
-		<script type="text/javascript">
-		var jiathis_config = {data_track_clickback:'true'};
-		</script>
-		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2089294" charset="utf-8"></script>
-		<!-- JiaThis Button END -->
-	</div>
-</div>
-
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="centos7-add-user-and-add-root-promise" data-title="centos7 add user and add root promise" data-url="http://yoursite.com/2016/05/18/centos7-add-user-and-add-root-promise/"></div>>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"zeillion"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-</div>
-
-
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -395,10 +276,10 @@ Retype new UNIX passwo">
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false
 	}
 </script>
