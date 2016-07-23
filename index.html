@@ -79,7 +79,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -232,19 +232,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###nginx常用命令</p>
+        <p>###nginx&#x5E38;&#x7528;&#x547D;&#x4EE4;</p>
 <blockquote>
-<p>1、查看nginx进程<br>1<br>ps -ef|grep nginx<br>说明：nginx的进程由主进程和工作进程组成。   </p>
-<p>2、启动nginx<br>1<br>nginx<br>启动结果显示nginx的主线程和工作线程，工作线程的数量跟nginx.conf中的配置参数worker_processes有关。 </p>
-<p>3、平滑启动nginx<br>1<br>kill -HUP <code>cat /var/run/nginx.pid</code><br>2<br>或者<br>3<br>nginx -s reload<br>其中进程文件路径在配置文件nginx.conf中可以找到。<br>平滑启动的意思是在不停止nginx的情况下，重启nginx，重新加载配置文件，启动新的工作线程，完美停止旧的工作线程。</p>
-<p>4、完美停止nginx<br>1<br>kill -QUIT <code>cat /var/run/nginx.pid</code>    </p>
-<p>5、快速停止nginx<br>1<br>kill -TERM <code>cat /var/run/nginx.pid</code><br>2<br>或者<br>3<br>kill -INT <code>cat /var/run/nginx.pid</code>    </p>
-<p>6、完美停止工作进程（主要用于平滑升级）<br>1<br>kill -WINCH <code>cat /var/run/nginx.pid</code>     </p>
-<p>7、强制停止nginx<br>1<br>pkill -9 nginx    </p>
-<p>8、检查对nginx.conf文件的修改是否正确<br>1<br>nginx -t -c /etc/nginx/nginx.conf 或者 nginx -t    </p>
-<p>9、停止nginx的命令<br>1<br>nginx -s stop    </p>
-<p>10、查看nginx的版本信息<br>1<br>nginx -v    </p>
-<p>11、查看完整的nginx的配置信息<br>1<br>nginx -V   </p>
+<p>1&#x3001;&#x67E5;&#x770B;nginx&#x8FDB;&#x7A0B;<br>1<br>ps -ef|grep nginx<br>&#x8BF4;&#x660E;&#xFF1A;nginx&#x7684;&#x8FDB;&#x7A0B;&#x7531;&#x4E3B;&#x8FDB;&#x7A0B;&#x548C;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x7EC4;&#x6210;&#x3002;   </p>
+<p>2&#x3001;&#x542F;&#x52A8;nginx<br>1<br>nginx<br>&#x542F;&#x52A8;&#x7ED3;&#x679C;&#x663E;&#x793A;nginx&#x7684;&#x4E3B;&#x7EBF;&#x7A0B;&#x548C;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#xFF0C;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x7684;&#x6570;&#x91CF;&#x8DDF;nginx.conf&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570;worker_processes&#x6709;&#x5173;&#x3002; </p>
+<p>3&#x3001;&#x5E73;&#x6ED1;&#x542F;&#x52A8;nginx<br>1<br>kill -HUP <code>cat /var/run/nginx.pid</code><br>2<br>&#x6216;&#x8005;<br>3<br>nginx -s reload<br>&#x5176;&#x4E2D;&#x8FDB;&#x7A0B;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;nginx.conf&#x4E2D;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x3002;<br>&#x5E73;&#x6ED1;&#x542F;&#x52A8;&#x7684;&#x610F;&#x601D;&#x662F;&#x5728;&#x4E0D;&#x505C;&#x6B62;nginx&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x91CD;&#x542F;nginx&#xFF0C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x65B0;&#x7684;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#xFF0C;&#x5B8C;&#x7F8E;&#x505C;&#x6B62;&#x65E7;&#x7684;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x3002;</p>
+<p>4&#x3001;&#x5B8C;&#x7F8E;&#x505C;&#x6B62;nginx<br>1<br>kill -QUIT <code>cat /var/run/nginx.pid</code>    </p>
+<p>5&#x3001;&#x5FEB;&#x901F;&#x505C;&#x6B62;nginx<br>1<br>kill -TERM <code>cat /var/run/nginx.pid</code><br>2<br>&#x6216;&#x8005;<br>3<br>kill -INT <code>cat /var/run/nginx.pid</code>    </p>
+<p>6&#x3001;&#x5B8C;&#x7F8E;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#xFF08;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5E73;&#x6ED1;&#x5347;&#x7EA7;&#xFF09;<br>1<br>kill -WINCH <code>cat /var/run/nginx.pid</code>     </p>
+<p>7&#x3001;&#x5F3A;&#x5236;&#x505C;&#x6B62;nginx<br>1<br>pkill -9 nginx    </p>
+<p>8&#x3001;&#x68C0;&#x67E5;&#x5BF9;nginx.conf&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x662F;&#x5426;&#x6B63;&#x786E;<br>1<br>nginx -t -c /etc/nginx/nginx.conf &#x6216;&#x8005; nginx -t    </p>
+<p>9&#x3001;&#x505C;&#x6B62;nginx&#x7684;&#x547D;&#x4EE4;<br>1<br>nginx -s stop    </p>
+<p>10&#x3001;&#x67E5;&#x770B;nginx&#x7684;&#x7248;&#x672C;&#x4FE1;&#x606F;<br>1<br>nginx -v    </p>
+<p>11&#x3001;&#x67E5;&#x770B;&#x5B8C;&#x6574;&#x7684;nginx&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;<br>1<br>nginx -V   </p>
 </blockquote>
 
       
@@ -306,12 +306,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##有些命令的路径没有在PATH环境变量中，可以用echo $PATH命令查询得知，添加路径到PATH环境变量的方法如下：</p>
-<p>###(如添加/sbin到PATH环境变量中)</p>
+        <p>##&#x6709;&#x4E9B;&#x547D;&#x4EE4;&#x7684;&#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x5728;PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;echo $PATH&#x547D;&#x4EE4;&#x67E5;&#x8BE2;&#x5F97;&#x77E5;&#xFF0C;&#x6DFB;&#x52A0;&#x8DEF;&#x5F84;&#x5230;PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>###(&#x5982;&#x6DFB;&#x52A0;/sbin&#x5230;PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;)</p>
 <ol>
-<li>如果只想在本次开机过程中临时性的添加修改，下次开机就无效的话，可以：输入export PATH=$PATH:/sbin</li>
-<li>如果只给当前用户永久添加，则：在~/.bash_profile中的靠近末尾有类似这样的一行PATH=$PATH:$HOME/bin后添加:/sbin，就变成PATH=$PATH:$HOME/bin:/sbin 文件修改并保持完以后，运行source ~/.bash_profile命令即可使修改操作立即生效</li>
-<li>如果给系统中所有的用户都永久添加，则:<br>在/etc/profile文件末尾添加export PATH=$PATH:/sbin文件修改并保持完以后，运行source etc/profile命令即可使修改操作立即生效</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x60F3;&#x5728;&#x672C;&#x6B21;&#x5F00;&#x673A;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E34;&#x65F6;&#x6027;&#x7684;&#x6DFB;&#x52A0;&#x4FEE;&#x6539;&#xFF0C;&#x4E0B;&#x6B21;&#x5F00;&#x673A;&#x5C31;&#x65E0;&#x6548;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#xFF1A;&#x8F93;&#x5165;export PATH=$PATH:/sbin</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x7ED9;&#x5F53;&#x524D;&#x7528;&#x6237;&#x6C38;&#x4E45;&#x6DFB;&#x52A0;&#xFF0C;&#x5219;&#xFF1A;&#x5728;~/.bash_profile&#x4E2D;&#x7684;&#x9760;&#x8FD1;&#x672B;&#x5C3E;&#x6709;&#x7C7B;&#x4F3C;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x884C;PATH=$PATH:$HOME/bin&#x540E;&#x6DFB;&#x52A0;:/sbin&#xFF0C;&#x5C31;&#x53D8;&#x6210;PATH=$PATH:$HOME/bin:/sbin &#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x5E76;&#x4FDD;&#x6301;&#x5B8C;&#x4EE5;&#x540E;&#xFF0C;&#x8FD0;&#x884C;source ~/.bash_profile&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x4F7F;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x7ACB;&#x5373;&#x751F;&#x6548;</li>
+<li>&#x5982;&#x679C;&#x7ED9;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x90FD;&#x6C38;&#x4E45;&#x6DFB;&#x52A0;&#xFF0C;&#x5219;:<br>&#x5728;/etc/profile&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;export PATH=$PATH:/sbin&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x5E76;&#x4FDD;&#x6301;&#x5B8C;&#x4EE5;&#x540E;&#xFF0C;&#x8FD0;&#x884C;source etc/profile&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x4F7F;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x7ACB;&#x5373;&#x751F;&#x6548;</li>
 </ol>
 
       
@@ -369,14 +369,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>测试环境：CentOS 5.5</p>
-<p>##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：</p>
+        <p>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#xFF1A;CentOS 5.5</p>
+<p>##1&#x3001;&#x6DFB;&#x52A0;&#x7528;&#x6237;&#xFF0C;&#x9996;&#x5148;&#x7528;adduser&#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7528;&#x6237;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p> -#adduser tommy</p>
-<p>//添加一个名为tommy的用户</p>
-<p> #passwd tommy   //修改密码</p>
+<p>//&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;tommy&#x7684;&#x7528;&#x6237;</p>
+<p> #passwd tommy   //&#x4FEE;&#x6539;&#x5BC6;&#x7801;</p>
 <p>Changing password for user tommy.</p>
-<p>New UNIX password:     //在这里输入新密码</p>
-<p>Retype new UNIX password:  //再次输入新密码</p>
+<p>New UNIX password:     //&#x5728;&#x8FD9;&#x91CC;&#x8F93;&#x5165;&#x65B0;&#x5BC6;&#x7801;</p>
+<p>Retype new UNIX password:  //&#x518D;&#x6B21;&#x8F93;&#x5165;&#x65B0;&#x5BC6;&#x7801;</p>
 <p>passwd: all authentication tokens updated successfully.</p>
       
     </div>
@@ -437,7 +437,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##如何把</p>
+        <p>##&#x5982;&#x4F55;&#x628A;</p>
 
       
     </div>
@@ -494,10 +494,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="html中的空格表示"><a href="#html中的空格表示" class="headerlink" title="html中的空格表示"></a>html中的空格表示</h1><ol>
-<li>半角空格–普通 &amp;nbsp</li>
-<li>全角空格– 半个汉字 &amp;ensp</li>
-<li>全角空格–一个汉字 &amp;emsp</li>
+        <h1 id="html&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x8868;&#x793A;"><a href="#html&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x8868;&#x793A;" class="headerlink" title="html&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x8868;&#x793A;"></a>html&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x8868;&#x793A;</h1><ol>
+<li>&#x534A;&#x89D2;&#x7A7A;&#x683C;&#x2013;&#x666E;&#x901A; &amp;nbsp</li>
+<li>&#x5168;&#x89D2;&#x7A7A;&#x683C;&#x2013; &#x534A;&#x4E2A;&#x6C49;&#x5B57; &amp;ensp</li>
+<li>&#x5168;&#x89D2;&#x7A7A;&#x683C;&#x2013;&#x4E00;&#x4E2A;&#x6C49;&#x5B57; &amp;emsp</li>
 </ol>
 
       
@@ -559,7 +559,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Net中使用Request对象取得路径的各方法"><a href="#Net中使用Request对象取得路径的各方法" class="headerlink" title=".Net中使用Request对象取得路径的各方法!"></a>.Net中使用Request对象取得路径的各方法!</h1><pre><code>Request.Url.AbsoluteUri： http://4rkwt72tgs.proxy.qqbrowser.cc/WeChatSGYH/order_confirm.aspx?xcname=123&amp;unid=30&amp;xcid=3&amp;xclength=9
+        <h1 id="Net&#x4E2D;&#x4F7F;&#x7528;Request&#x5BF9;&#x8C61;&#x53D6;&#x5F97;&#x8DEF;&#x5F84;&#x7684;&#x5404;&#x65B9;&#x6CD5;"><a href="#Net&#x4E2D;&#x4F7F;&#x7528;Request&#x5BF9;&#x8C61;&#x53D6;&#x5F97;&#x8DEF;&#x5F84;&#x7684;&#x5404;&#x65B9;&#x6CD5;" class="headerlink" title=".Net&#x4E2D;&#x4F7F;&#x7528;Request&#x5BF9;&#x8C61;&#x53D6;&#x5F97;&#x8DEF;&#x5F84;&#x7684;&#x5404;&#x65B9;&#x6CD5;!"></a>.Net&#x4E2D;&#x4F7F;&#x7528;Request&#x5BF9;&#x8C61;&#x53D6;&#x5F97;&#x8DEF;&#x5F84;&#x7684;&#x5404;&#x65B9;&#x6CD5;!</h1><pre><code>Request.Url.AbsoluteUri&#xFF1A; http://4rkwt72tgs.proxy.qqbrowser.cc/WeChatSGYH/order_confirm.aspx?xcname=123&amp;unid=30&amp;xcid=3&amp;xclength=9
 Request.Url.AbsolutePath: /WeChatSGYH/order_confirm.aspx
 Request.Url.Authority: 4rkwt72tgs.proxy.qqbrowser.cc
 Request.Url.DnsSafeHost: 4rkwt72tgs.proxy.qqbrowser.cc
@@ -623,13 +623,13 @@ Request.Url.PathAndQuery: /WeChatSGYH/order_confirm.aspx?xcname=123&amp;unid=30&
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="配置git通过SSH连接到github"><a href="#配置git通过SSH连接到github" class="headerlink" title="配置git通过SSH连接到github"></a>配置git通过SSH连接到github</h1><blockquote>
-<p>使用的是windows平台</p>
+        <h1 id="&#x914D;&#x7F6E;git&#x901A;&#x8FC7;SSH&#x8FDE;&#x63A5;&#x5230;github"><a href="#&#x914D;&#x7F6E;git&#x901A;&#x8FC7;SSH&#x8FDE;&#x63A5;&#x5230;github" class="headerlink" title="&#x914D;&#x7F6E;git&#x901A;&#x8FC7;SSH&#x8FDE;&#x63A5;&#x5230;github"></a>&#x914D;&#x7F6E;git&#x901A;&#x8FC7;SSH&#x8FDE;&#x63A5;&#x5230;github</h1><blockquote>
+<p>&#x4F7F;&#x7528;&#x7684;&#x662F;windows&#x5E73;&#x53F0;</p>
 </blockquote>
 <ol>
-<li>git配置用户信息<blockquote>
-<p>git config –global user.name “Zeillion” </p>
-<p>git config –global user.email “zeillion@163.com”</p>
+<li>git&#x914D;&#x7F6E;&#x7528;&#x6237;&#x4FE1;&#x606F;<blockquote>
+<p>git config &#x2013;global user.name &#x201C;Zeillion&#x201D; </p>
+<p>git config &#x2013;global user.email &#x201C;zeillion@163.com&#x201D;</p></blockquote></li></ol>
       
     </div>
     
@@ -689,7 +689,8 @@ Request.Url.PathAndQuery: /WeChatSGYH/order_confirm.aspx?xcname=123&amp;unid=30&
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><img src="/2016/03/17/test2/1.jpg =100x20" alt="logo"></p>
+
       
     </div>
     
@@ -794,7 +795,7 @@ Request.Url.PathAndQuery: /WeChatSGYH/order_confirm.aspx?xcname=123&amp;unid=30&
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>

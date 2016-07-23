@@ -6,28 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>centos add system path | 赵忠义的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##有些命令的路径没有在PATH环境变量中，可以用echo $PATH命令查询得知，添加路径到PATH环境变量的方法如下：
-###(如添加/sbin到PATH环境变量中)
-
-如果只想在本次开机过程中临时性的添加修改，下次开机就无效的话，可以：输入export PATH=$PATH:/sbin
-如果只给当前用户永久添加，则：在~/.bash_profile中的靠近末尾有类似这样的一行PATH=$PA">
+  <meta name="description" content="##&amp;#x6709;&amp;#x4E9B;&amp;#x547D;&amp;#x4EE4;&amp;#x7684;&amp;#x8DEF;&amp;#x5F84;&amp;#x6CA1;&amp;#x6709;&amp;#x5728;PATH&amp;#x73AF;&amp;#x5883;&amp;#x53D8;&amp;#x91CF;&amp;#x4E2D;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;echo $PATH&amp;#x547D;&amp;#x4EE4;&amp;#x67E5;&amp;#x8BE2;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos add system path">
 <meta property="og:url" content="http://yoursite.com/2016/05/19/centos-add-system-path/index.html">
 <meta property="og:site_name" content="赵忠义的博客">
-<meta property="og:description" content="##有些命令的路径没有在PATH环境变量中，可以用echo $PATH命令查询得知，添加路径到PATH环境变量的方法如下：
-###(如添加/sbin到PATH环境变量中)
-
-如果只想在本次开机过程中临时性的添加修改，下次开机就无效的话，可以：输入export PATH=$PATH:/sbin
-如果只给当前用户永久添加，则：在~/.bash_profile中的靠近末尾有类似这样的一行PATH=$PA">
+<meta property="og:description" content="##&amp;#x6709;&amp;#x4E9B;&amp;#x547D;&amp;#x4EE4;&amp;#x7684;&amp;#x8DEF;&amp;#x5F84;&amp;#x6CA1;&amp;#x6709;&amp;#x5728;PATH&amp;#x73AF;&amp;#x5883;&amp;#x53D8;&amp;#x91CF;&amp;#x4E2D;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;echo $PATH&amp;#x547D;&amp;#x4EE4;&amp;#x67E5;&amp;#x8BE2;">
 <meta property="og:updated_time" content="2016-07-23T04:11:27.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos add system path">
-<meta name="twitter:description" content="##有些命令的路径没有在PATH环境变量中，可以用echo $PATH命令查询得知，添加路径到PATH环境变量的方法如下：
-###(如添加/sbin到PATH环境变量中)
-
-如果只想在本次开机过程中临时性的添加修改，下次开机就无效的话，可以：输入export PATH=$PATH:/sbin
-如果只给当前用户永久添加，则：在~/.bash_profile中的靠近末尾有类似这样的一行PATH=$PA">
+<meta name="twitter:description" content="##&amp;#x6709;&amp;#x4E9B;&amp;#x547D;&amp;#x4EE4;&amp;#x7684;&amp;#x8DEF;&amp;#x5F84;&amp;#x6CA1;&amp;#x6709;&amp;#x5728;PATH&amp;#x73AF;&amp;#x5883;&amp;#x53D8;&amp;#x91CF;&amp;#x4E2D;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;echo $PATH&amp;#x547D;&amp;#x4EE4;&amp;#x67E5;&amp;#x8BE2;">
   
     <link rel="alternative" href="/atom.xml" title="赵忠义的博客" type="application/atom+xml">
   
@@ -92,7 +80,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -254,12 +242,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##有些命令的路径没有在PATH环境变量中，可以用echo $PATH命令查询得知，添加路径到PATH环境变量的方法如下：</p>
-<p>###(如添加/sbin到PATH环境变量中)</p>
+        <p>##&#x6709;&#x4E9B;&#x547D;&#x4EE4;&#x7684;&#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x5728;PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;echo $PATH&#x547D;&#x4EE4;&#x67E5;&#x8BE2;&#x5F97;&#x77E5;&#xFF0C;&#x6DFB;&#x52A0;&#x8DEF;&#x5F84;&#x5230;PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>###(&#x5982;&#x6DFB;&#x52A0;/sbin&#x5230;PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;)</p>
 <ol>
-<li>如果只想在本次开机过程中临时性的添加修改，下次开机就无效的话，可以：输入export PATH=$PATH:/sbin</li>
-<li>如果只给当前用户永久添加，则：在~/.bash_profile中的靠近末尾有类似这样的一行PATH=$PATH:$HOME/bin后添加:/sbin，就变成PATH=$PATH:$HOME/bin:/sbin 文件修改并保持完以后，运行source ~/.bash_profile命令即可使修改操作立即生效</li>
-<li>如果给系统中所有的用户都永久添加，则:<br>在/etc/profile文件末尾添加export PATH=$PATH:/sbin文件修改并保持完以后，运行source etc/profile命令即可使修改操作立即生效</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x60F3;&#x5728;&#x672C;&#x6B21;&#x5F00;&#x673A;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E34;&#x65F6;&#x6027;&#x7684;&#x6DFB;&#x52A0;&#x4FEE;&#x6539;&#xFF0C;&#x4E0B;&#x6B21;&#x5F00;&#x673A;&#x5C31;&#x65E0;&#x6548;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#xFF1A;&#x8F93;&#x5165;export PATH=$PATH:/sbin</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x7ED9;&#x5F53;&#x524D;&#x7528;&#x6237;&#x6C38;&#x4E45;&#x6DFB;&#x52A0;&#xFF0C;&#x5219;&#xFF1A;&#x5728;~/.bash_profile&#x4E2D;&#x7684;&#x9760;&#x8FD1;&#x672B;&#x5C3E;&#x6709;&#x7C7B;&#x4F3C;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x884C;PATH=$PATH:$HOME/bin&#x540E;&#x6DFB;&#x52A0;:/sbin&#xFF0C;&#x5C31;&#x53D8;&#x6210;PATH=$PATH:$HOME/bin:/sbin &#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x5E76;&#x4FDD;&#x6301;&#x5B8C;&#x4EE5;&#x540E;&#xFF0C;&#x8FD0;&#x884C;source ~/.bash_profile&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x4F7F;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x7ACB;&#x5373;&#x751F;&#x6548;</li>
+<li>&#x5982;&#x679C;&#x7ED9;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x90FD;&#x6C38;&#x4E45;&#x6DFB;&#x52A0;&#xFF0C;&#x5219;:<br>&#x5728;/etc/profile&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;export PATH=$PATH:/sbin&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x5E76;&#x4FDD;&#x6301;&#x5B8C;&#x4EE5;&#x540E;&#xFF0C;&#x8FD0;&#x884C;source etc/profile&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x4F7F;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x7ACB;&#x5373;&#x751F;&#x6548;</li>
 </ol>
 
       

@@ -6,37 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>centos7 add user and add root promise | 赵忠义的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试环境：CentOS 5.5
-##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- -#adduser tommy
-//添加一个名为tommy的用户
- #passwd tommy   //修改密码
-Changing password for user tommy.
-New UNIX password:     //在这里输入新密码
-Retype new UNIX passwo">
+  <meta name="description" content="&amp;#x6D4B;&amp;#x8BD5;&amp;#x73AF;&amp;#x5883;&amp;#xFF1A;CentOS 5.5
+##1&amp;#x3001;&amp;#x6DFB;&amp;#x52A0;&amp;#x7528;&amp;#x6237;&amp;#xFF0C;&amp;#x9996;&amp;#x5148;&amp;#x7528;adduser&amp;#x547D;&amp;#x4EE4;&amp;#x6DFB;&amp;#x52A0;&amp;#x4E00;&amp;#x4E2A;&amp;#x666E;&amp;#x901A;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos7 add user and add root promise">
 <meta property="og:url" content="http://yoursite.com/2016/05/18/centos7-add-user-and-add-root-promise/index.html">
 <meta property="og:site_name" content="赵忠义的博客">
-<meta property="og:description" content="测试环境：CentOS 5.5
-##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- -#adduser tommy
-//添加一个名为tommy的用户
- #passwd tommy   //修改密码
-Changing password for user tommy.
-New UNIX password:     //在这里输入新密码
-Retype new UNIX passwo">
+<meta property="og:description" content="&amp;#x6D4B;&amp;#x8BD5;&amp;#x73AF;&amp;#x5883;&amp;#xFF1A;CentOS 5.5
+##1&amp;#x3001;&amp;#x6DFB;&amp;#x52A0;&amp;#x7528;&amp;#x6237;&amp;#xFF0C;&amp;#x9996;&amp;#x5148;&amp;#x7528;adduser&amp;#x547D;&amp;#x4EE4;&amp;#x6DFB;&amp;#x52A0;&amp;#x4E00;&amp;#x4E2A;&amp;#x666E;&amp;#x901A;&amp;#x">
 <meta property="og:updated_time" content="2016-07-23T04:11:27.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7 add user and add root promise">
-<meta name="twitter:description" content="测试环境：CentOS 5.5
-##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：
- -#adduser tommy
-//添加一个名为tommy的用户
- #passwd tommy   //修改密码
-Changing password for user tommy.
-New UNIX password:     //在这里输入新密码
-Retype new UNIX passwo">
+<meta name="twitter:description" content="&amp;#x6D4B;&amp;#x8BD5;&amp;#x73AF;&amp;#x5883;&amp;#xFF1A;CentOS 5.5
+##1&amp;#x3001;&amp;#x6DFB;&amp;#x52A0;&amp;#x7528;&amp;#x6237;&amp;#xFF0C;&amp;#x9996;&amp;#x5148;&amp;#x7528;adduser&amp;#x547D;&amp;#x4EE4;&amp;#x6DFB;&amp;#x52A0;&amp;#x4E00;&amp;#x4E2A;&amp;#x666E;&amp;#x901A;&amp;#x">
   
     <link rel="alternative" href="/atom.xml" title="赵忠义的博客" type="application/atom+xml">
   
@@ -101,7 +83,7 @@ Retype new UNIX passwo">
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -263,34 +245,34 @@ Retype new UNIX passwo">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>测试环境：CentOS 5.5</p>
-<p>##1、添加用户，首先用adduser命令添加一个普通用户，命令如下：</p>
+        <p>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#xFF1A;CentOS 5.5</p>
+<p>##1&#x3001;&#x6DFB;&#x52A0;&#x7528;&#x6237;&#xFF0C;&#x9996;&#x5148;&#x7528;adduser&#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7528;&#x6237;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p> -#adduser tommy</p>
-<p>//添加一个名为tommy的用户</p>
-<p> #passwd tommy   //修改密码</p>
+<p>//&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;tommy&#x7684;&#x7528;&#x6237;</p>
+<p> #passwd tommy   //&#x4FEE;&#x6539;&#x5BC6;&#x7801;</p>
 <p>Changing password for user tommy.</p>
-<p>New UNIX password:     //在这里输入新密码</p>
-<p>Retype new UNIX password:  //再次输入新密码</p>
+<p>New UNIX password:     //&#x5728;&#x8FD9;&#x91CC;&#x8F93;&#x5165;&#x65B0;&#x5BC6;&#x7801;</p>
+<p>Retype new UNIX password:  //&#x518D;&#x6B21;&#x8F93;&#x5165;&#x65B0;&#x5BC6;&#x7801;</p>
 <p>passwd: all authentication tokens updated successfully.</p>
 <a id="more"></a>
-<p>##2、赋予root权限</p>
-<p>###方法一： 修改/etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉</p>
+<p>##2&#x3001;&#x8D4B;&#x4E88;root&#x6743;&#x9650;</p>
+<p>###&#x65B9;&#x6CD5;&#x4E00;&#xFF1A; &#x4FEE;&#x6539;/etc/sudoers &#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;&#x4E0B;&#x9762;&#x4E00;&#x884C;&#xFF0C;&#x628A;&#x524D;&#x9762;&#x7684;&#x6CE8;&#x91CA;&#xFF08;#&#xFF09;&#x53BB;&#x6389;</p>
 <p>  -## Allows people in group wheel to run all commands</p>
 <p>%wheel    ALL=(ALL)    ALL</p>
-<p>然后修改用户，使其属于root组（wheel），命令如下：</p>
+<p>&#x7136;&#x540E;&#x4FEE;&#x6539;&#x7528;&#x6237;&#xFF0C;&#x4F7F;&#x5176;&#x5C5E;&#x4E8E;root&#x7EC4;&#xFF08;wheel&#xFF09;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p> -#usermod -g root tommy</p>
-<p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
-<p>###方法二： 修改/etc/sudoers 文件，找到下面一行，在root下面添加一行，如下所示：</p>
+<p>&#x4FEE;&#x6539;&#x5B8C;&#x6BD5;&#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x7528;tommy&#x5E10;&#x53F7;&#x767B;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x547D;&#x4EE4;su &#x2013; &#xFF0C;&#x5373;&#x53EF;&#x83B7;&#x5F97;root&#x6743;&#x9650;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>###&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A; &#x4FEE;&#x6539;/etc/sudoers &#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;&#x4E0B;&#x9762;&#x4E00;&#x884C;&#xFF0C;&#x5728;root&#x4E0B;&#x9762;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
 <p> -## Allow root to run any commands anywhere</p>
 <p>root    ALL=(ALL)     ALL</p>
 <p>tommy   ALL=(ALL)     ALL</p>
-<p>修改完毕，现在可以用tommy帐号登录，然后用命令su – ，即可获得root权限进行操作。</p>
-<p>###方法三： 修改/etc/passwd 文件，找到如下行，把用户ID修改为0 ，如下所示：</p>
+<p>&#x4FEE;&#x6539;&#x5B8C;&#x6BD5;&#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x7528;tommy&#x5E10;&#x53F7;&#x767B;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x547D;&#x4EE4;su &#x2013; &#xFF0C;&#x5373;&#x53EF;&#x83B7;&#x5F97;root&#x6743;&#x9650;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>###&#x65B9;&#x6CD5;&#x4E09;&#xFF1A; &#x4FEE;&#x6539;/etc/passwd &#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;&#x5982;&#x4E0B;&#x884C;&#xFF0C;&#x628A;&#x7528;&#x6237;ID&#x4FEE;&#x6539;&#x4E3A;0 &#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
 <p>tommy:x:500:500:tommy:/home/tommy:/bin/bash</p>
-<p>修改后如下</p>
+<p>&#x4FEE;&#x6539;&#x540E;&#x5982;&#x4E0B;</p>
 <p>tommy:x:0:500:tommy:/home/tommy:/bin/bash</p>
-<p>保存，用tommy账户登录后，直接获取的就是root帐号的权限。</p>
-<p>##友情提醒：虽然方法三看上去简单方便，但一般不推荐使用，推荐使用方法二。</p>
+<p>&#x4FDD;&#x5B58;&#xFF0C;&#x7528;tommy&#x8D26;&#x6237;&#x767B;&#x5F55;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x7684;&#x5C31;&#x662F;root&#x5E10;&#x53F7;&#x7684;&#x6743;&#x9650;&#x3002;</p>
+<p>##&#x53CB;&#x60C5;&#x63D0;&#x9192;&#xFF1A;&#x867D;&#x7136;&#x65B9;&#x6CD5;&#x4E09;&#x770B;&#x4E0A;&#x53BB;&#x7B80;&#x5355;&#x65B9;&#x4FBF;&#xFF0C;&#x4F46;&#x4E00;&#x822C;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E8C;&#x3002;</p>
 
       
     </div>
