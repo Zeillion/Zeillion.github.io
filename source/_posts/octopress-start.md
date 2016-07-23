@@ -3,7 +3,7 @@ layout: post
 title: "在github上配置octopress博客"
 date: 2016-03-17 17:02:09 +0800
 comments: true
-categories: [git, github,octopress]
+categories: [git,github,octopress]
 ---
 
 # 配置git通过SSH连接到github
@@ -34,7 +34,7 @@ categories: [git, github,octopress]
 4. ruby dk.rb install 提示安装成功会出现两条信息。
 
 
-# 安装Octopress并设置默认主题
+# 安装Octopress并设置默认主题         
 1. 克隆Octopress至本地 
 	>git clone https://github.com/imathis/octopress.git octopress
 2. 安装依赖项 
