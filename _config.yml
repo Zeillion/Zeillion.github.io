@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Zeil的博客
-subtitle: 测试博客标题
-description: Walk steps step by step 
-author: Zeil
+title: 赵忠义的博客
+subtitle: 人生路漫漫,且行且珍惜 
+description: 不积跬步，无以至千里；不积水流，无以成江海 
+author: 赵忠义
 language: zh-CN
 timezone:
 
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
