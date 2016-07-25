@@ -235,7 +235,7 @@
         <p><img src="/2016/07/25/markdwoownSyntax/1.jpg" alt="image"></p>
 <p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
 <p><a href="mailto:address@example.com">address@example.com</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">aa</span><span class="params">(a)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> a</span><br><span class="line">	<span class="keyword">print</span> a + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">aa</span><span class="params">(a)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> a</span><br><span class="line">	<span class="keyword">print</span> a + <span class="number">1</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -346,18 +346,7 @@
         <p>###nginx&#x5E38;&#x7528;&#x547D;&#x4EE4;</p>
 <blockquote>
 <p>1&#x3001;&#x67E5;&#x770B;nginx&#x8FDB;&#x7A0B;<br>1<br>ps -ef|grep nginx<br>&#x8BF4;&#x660E;&#xFF1A;nginx&#x7684;&#x8FDB;&#x7A0B;&#x7531;&#x4E3B;&#x8FDB;&#x7A0B;&#x548C;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x7EC4;&#x6210;&#x3002;   </p>
-<p>2&#x3001;&#x542F;&#x52A8;nginx<br>1<br>nginx<br>&#x542F;&#x52A8;&#x7ED3;&#x679C;&#x663E;&#x793A;nginx&#x7684;&#x4E3B;&#x7EBF;&#x7A0B;&#x548C;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#xFF0C;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x7684;&#x6570;&#x91CF;&#x8DDF;nginx.conf&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570;worker_processes&#x6709;&#x5173;&#x3002; </p>
-<p>3&#x3001;&#x5E73;&#x6ED1;&#x542F;&#x52A8;nginx<br>1<br>kill -HUP <code>cat /var/run/nginx.pid</code><br>2<br>&#x6216;&#x8005;<br>3<br>nginx -s reload<br>&#x5176;&#x4E2D;&#x8FDB;&#x7A0B;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;nginx.conf&#x4E2D;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x3002;<br>&#x5E73;&#x6ED1;&#x542F;&#x52A8;&#x7684;&#x610F;&#x601D;&#x662F;&#x5728;&#x4E0D;&#x505C;&#x6B62;nginx&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x91CD;&#x542F;nginx&#xFF0C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x65B0;&#x7684;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#xFF0C;&#x5B8C;&#x7F8E;&#x505C;&#x6B62;&#x65E7;&#x7684;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x3002;</p>
-<p>4&#x3001;&#x5B8C;&#x7F8E;&#x505C;&#x6B62;nginx<br>1<br>kill -QUIT <code>cat /var/run/nginx.pid</code>    </p>
-<p>5&#x3001;&#x5FEB;&#x901F;&#x505C;&#x6B62;nginx<br>1<br>kill -TERM <code>cat /var/run/nginx.pid</code><br>2<br>&#x6216;&#x8005;<br>3<br>kill -INT <code>cat /var/run/nginx.pid</code>    </p>
-<p>6&#x3001;&#x5B8C;&#x7F8E;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#xFF08;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5E73;&#x6ED1;&#x5347;&#x7EA7;&#xFF09;<br>1<br>kill -WINCH <code>cat /var/run/nginx.pid</code>     </p>
-<p>7&#x3001;&#x5F3A;&#x5236;&#x505C;&#x6B62;nginx<br>1<br>pkill -9 nginx    </p>
-<p>8&#x3001;&#x68C0;&#x67E5;&#x5BF9;nginx.conf&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x662F;&#x5426;&#x6B63;&#x786E;<br>1<br>nginx -t -c /etc/nginx/nginx.conf &#x6216;&#x8005; nginx -t    </p>
-<p>9&#x3001;&#x505C;&#x6B62;nginx&#x7684;&#x547D;&#x4EE4;<br>1<br>nginx -s stop    </p>
-<p>10&#x3001;&#x67E5;&#x770B;nginx&#x7684;&#x7248;&#x672C;&#x4FE1;&#x606F;<br>1<br>nginx -v    </p>
-<p>11&#x3001;&#x67E5;&#x770B;&#x5B8C;&#x6574;&#x7684;nginx&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;<br>1<br>nginx -V   </p>
 </blockquote>
-
       
     </div>
     
@@ -374,6 +363,10 @@
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/19/nginx常用命令/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
