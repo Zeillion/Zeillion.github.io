@@ -1,6 +1,6 @@
 ---
 layout: post
-title: nginx常用命令
+title: nginx常用命令一
 date: 2016-05-19 20:49:25
 comments: true
 categories: [nginx]
@@ -13,7 +13,7 @@ tags: [nginx]
 1
 ps -ef|grep nginx  
 说明：nginx的进程由主进程和工作进程组成。   
-
+<!--more-->
 
 >2、启动nginx  
 1
