@@ -14,7 +14,8 @@
 <meta property="og:description" content="&amp;#x524D;&amp;#x8A00;&amp;#x4ECA;&amp;#x5929;&amp;#x7528;&amp;#x5230;css3&amp;#x76F8;&amp;#x5173;&amp;#x77E5;&amp;#x8BC6;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x628A;&amp;#x5173;&amp;#x4E8E;css3&amp;#x8F6C;&amp;#x6362;&amp;#x76F8;&amp;#x524D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;&amp;#x505A;">
 <meta property="og:image" content="http://imzhongyi.com/2016/07/27/css3-transform/css3transform2d_caniuse.png">
 <meta property="og:image" content="http://imzhongyi.com/2016/07/27/css3-transform/css3transform3d_caniuse.png">
-<meta property="og:updated_time" content="2016-07-27T04:31:53.691Z">
+<meta property="og:image" content="http://imzhongyi.com/2016/07/27/css3-transform/css3transform_3d.png">
+<meta property="og:updated_time" content="2016-07-27T06:59:07.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css3的2d转换和3d转换">
 <meta name="twitter:description" content="&amp;#x524D;&amp;#x8A00;&amp;#x4ECA;&amp;#x5929;&amp;#x7528;&amp;#x5230;css3&amp;#x76F8;&amp;#x5173;&amp;#x77E5;&amp;#x8BC6;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x628A;&amp;#x5173;&amp;#x4E8E;css3&amp;#x8F6C;&amp;#x6362;&amp;#x76F8;&amp;#x524D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;&amp;#x505A;">
@@ -83,7 +84,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -268,7 +269,7 @@ transform:rotate(30deg);
 </code></pre><p>css3&#x7684;&#x5199;&#x6CD5;&#x9700;&#x8981;&#x5148;&#x5199;transform&#x7136;&#x540E;&#x6307;&#x5B9A;&#x8F6C;&#x6362;&#x540D;&#x79F0;&#x548C;&#x5FC5;&#x8981;&#x53C2;&#x6570;&#x3002;</p>
 <h1 id="css3&#x7684;2d&#x8F6C;&#x6362;"><a href="#css3&#x7684;2d&#x8F6C;&#x6362;" class="headerlink" title="css3&#x7684;2d&#x8F6C;&#x6362;"></a>css3&#x7684;2d&#x8F6C;&#x6362;</h1><p>css3-2d&#x8F6C;&#x6362;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
 <ul>
-<li>translate()<br>  &#x901A;&#x8FC7; translate() &#x65B9;&#x6CD5;&#xFF0C;&#x5143;&#x7D20;&#x4ECE;&#x5176;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x79FB;&#x52A8;&#xFF0C;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684; left&#xFF08;x &#x5750;&#x6807;&#xFF09; &#x548C; top&#xFF08;y &#x5750;&#x6807;&#xFF09; &#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x91CC;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x9762;&#x5206;&#x6BD4;&#xFF0C;&#x8FD9;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#x53C2;&#x7167;&#x7684;&#x662F;&#x81EA;&#x8EAB;&#x3002;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x4E9B;&#x5C5E;&#x6027;&#x6765;&#x8FDB;&#x884C;&#x5143;&#x7D20;&#x5C45;&#x4E2D;&#x3002;<br>  eg:   <pre><code>div
+<li>translate() (translateX(n)/translateY(n))<br>  &#x901A;&#x8FC7; translate() &#x65B9;&#x6CD5;&#xFF0C;&#x5143;&#x7D20;&#x4ECE;&#x5176;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x79FB;&#x52A8;&#xFF0C;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684; left&#xFF08;x &#x5750;&#x6807;&#xFF09; &#x548C; top&#xFF08;y &#x5750;&#x6807;&#xFF09; &#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x91CC;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x9762;&#x5206;&#x6BD4;&#xFF0C;&#x8FD9;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#x53C2;&#x7167;&#x7684;&#x662F;&#x81EA;&#x8EAB;&#x3002;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x4E9B;&#x5C5E;&#x6027;&#x6765;&#x8FDB;&#x884C;&#x5143;&#x7D20;&#x5C45;&#x4E2D;&#x3002;<br>  eg:   <pre><code>div
 {
 transform: translate(-50%,-50%);
 }
@@ -278,10 +279,21 @@ transform: translate(-50%,-50%);
 transform: rotate(30deg);
 }
 </code></pre></li>
-<li>scale()</li>
-<li>skew()</li>
-<li>matrix()</li>
+<li>scale()  (scaleX(n)/scaleY(n))<br>  &#x901A;&#x8FC7; scale() &#x65B9;&#x6CD5;&#xFF0C;&#x5143;&#x7D20;&#x7684;&#x5C3A;&#x5BF8;&#x4F1A;&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;&#xFF0C;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x5BBD;&#x5EA6;&#xFF08;X &#x8F74;&#xFF09;&#x548C;&#x9AD8;&#x5EA6;&#xFF08;Y &#x8F74;&#xFF09;&#x53C2;&#x6570;&#xFF1A;<br>  eg:  <pre><code>div
+{
+transform: scale(2,4);
+}
+</code></pre></li>
+<li>skew()  (skewX(angle) / skewY(angle))<br>  &#x901A;&#x8FC7; skew() &#x65B9;&#x6CD5;&#xFF0C;&#x5143;&#x7D20;&#x7FFB;&#x8F6C;&#x7ED9;&#x5B9A;&#x7684;&#x89D2;&#x5EA6;&#xFF0C;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x6C34;&#x5E73;&#x7EBF;&#xFF08;X &#x8F74;&#xFF09;&#x548C;&#x5782;&#x76F4;&#x7EBF;&#xFF08;Y &#x8F74;&#xFF09;&#x53C2;&#x6570;&#xFF1A;<br>  eg:  <pre><code>div
+{
+transform: skew(30deg,20deg);
+}
+</code></pre></li>
+<li>matrix()<br>  matrix() &#x65B9;&#x6CD5;&#x9700;&#x8981;&#x516D;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5305;&#x542B;&#x6570;&#x5B66;&#x51FD;&#x6570;&#xFF0C;&#x5141;&#x8BB8;&#x60A8;&#xFF1A;&#x65CB;&#x8F6C;&#x3001;&#x7F29;&#x653E;&#x3001;&#x79FB;&#x52A8;&#x4EE5;&#x53CA;&#x503E;&#x659C;&#x5143;&#x7D20;&#x3002;<br>  matrix&#x7A0D;&#x590D;&#x6742;&#x4E9B;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x6570;&#x5B66;&#x8BA1;&#x7B97;&#xFF0C;&#x4E00;&#x7EA7;&#x9AD8;&#x7EA7;&#x5E94;&#x7528;&#x65F6;&#x53EF;&#x4EE5;&#x7528;&#x5230;&#xFF0C;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x7684;&#x670B;&#x53CB;&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="http://www.tuicool.com/articles/na6jy2" title="&#x8FD9;&#x662F;&#x4E00;&#x7BC7;&#x63A8;&#x9177;&#x4E0A;&#x7684;&#x4ECB;&#x7ECD;&#x6587;&#x7AE0;" target="_blank" rel="external">CSS3 Transform Matrix</a>, &#x8FD9;&#x662F;&#x4E00;&#x7BC7;&#x63A8;&#x9177;&#x4E0A;&#x7684;&#x4ECB;&#x7ECD;&#x6587;&#x7AE0;;</li>
 </ul>
+<h1 id="ccs3&#x7684;3d&#x8F6C;&#x6362;"><a href="#ccs3&#x7684;3d&#x8F6C;&#x6362;" class="headerlink" title="ccs3&#x7684;3d&#x8F6C;&#x6362;"></a>ccs3&#x7684;3d&#x8F6C;&#x6362;</h1><p>css3&#x7684;3d&#x8F6C;&#x6362;&#x53EA;&#x662F;&#x6BD4;2d&#x589E;&#x52A0;&#x4E86;&#x5728;z&#x8F74;&#x4E0A;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x518D;&#x6D4B;&#x8BD5;&#xFF0C;&#x4E0B;&#x9762;&#x6458;&#x81EA;w3school&#x7684;&#x56FE;&#x7247;</p>
+<p><img src="/2016/07/27/css3-transform/css3transform_3d.png" alt="css3-transform-3d"></p>
+<p># </p>
 
       
     </div>
